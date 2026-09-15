@@ -1,6 +1,6 @@
-# PiKVM-Detection
+# Absolute Mouse Detection
 
-I'll make this readme official and pretty later. Just storing my two main scripts for the time being.
+I'll make this readme official and pretty later. Just storing my two main scripts for the time being for sharing. Will likely create full repo detailing all PiKVM research.
 * hid_axis_mode.ps1 - Analyze all connected pointer devices and determine if it is using absolute or relative mode. Basis for PiKVM research.
 * hid_axis_mode.py - same thing, but python version designed for Cortex XDR Agent Scripts. Can still be ran wherever though.
 
