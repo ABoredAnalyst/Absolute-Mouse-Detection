@@ -2,9 +2,11 @@
 
 I'll make this readme official and pretty later. Just storing my two main scripts for the time being for sharing. Will likely create full repo detailing all PiKVM research.
 * hid_axis_mode.ps1 - Analyze all connected pointer devices and determine if it is using absolute or relative mode. Basis for PiKVM research.
-* hid_axis_mode.py - same thing, but python version designed for Cortex XDR Agent Scripts. Can still be ran wherever though.
+* monitor_EDID_duplicate.ps1 - Analyze registered displays and looks for indicators of a cloned display.
 
-Both scripts check HID collections two ways and merges them by device instance:
+Both scripts include a Powershell and Python version. Function exactly the same, but Cortex XDR can only run python format while the main detection logic is done in powershell.
+
+hid_axis_mode checks HID collections two ways and merges them by device instance:
 *  GetRawInputDeviceList (user32) - per terminal-services session, so it is
         empty or short outside the interactive session, but it authoritatively
         marks a collection as mouse-class.
@@ -15,4 +17,4 @@ Both scripts check HID collections two ways and merges them by device instance:
 When running automated scripts remotely through a RMM/EDR service, they tend to run as SYSTEM, which cannot see GetRawInputDeviceList.
 The second collection method allows you to investigate a machine directly or remotely.  
 
-Will include more detailed explanation page down the road. 
+Will make this more formal and detailed down the road
